@@ -1,0 +1,5 @@
+# Active le module d réécriture d'apache (mod_rewrite)
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
