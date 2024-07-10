@@ -1,15 +1,21 @@
 <?php
 
-// require_once '../src/Entity/Test.php';
 require_once '../src/Core/Autoloader.php';
-// use App\Entity\Test;
+require_once '../config/env.php';
+
+
+echo DIR_PATH;
+
 use App\Core\Autoloader;
+use App\Core\Database;
+
 use App\Core\Router;
 
 Autoloader::autoload();
+Database::initConnection();
 
-// $test = new Test();
-// echo $test->display();
+// $pdo = Database::getConnexion();
+
 echo '<br>';
 
 $router = new Router();
